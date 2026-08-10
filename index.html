@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontanos | Soluciones Tecnológicas para tu Negocio</title>
+<meta name="description" content="Kontanos desarrolla plataformas TIC, sistemas de administración, páginas web, e-commerce, puntos de venta y software a medida para hacer crecer tu negocio.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="antialiased">
+
+<a href="#contenido" class="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:top-4 focus:left-4 focus:rounded-lg focus:bg-primary focus:text-white focus:px-4 focus:py-2">Saltar al contenido principal</a>
+
+<!-- ===================== HEADER ===================== -->
+<div id="scroll-progress" class="fixed inset-x-0 top-0 z-[60] h-1 origin-left scale-x-0 bg-accent transition-transform duration-150 ease-out" aria-hidden="true"></div>
+<header id="header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+  <nav class="container-page flex h-20 items-center justify-between" aria-label="Navegación principal">
+    <a href="#inicio" class="flex items-center gap-2.5 font-heading text-xl font-bold text-white" id="brand-link">
+      <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-primary-dark text-white">
+        <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor"><path d="M12 2 20 6v7c0 1.5-.7 2.8-1.8 3.6l-4.8 4.2c-.8.7-2 .7-2.8 0l-4.8-4.2C4.7 15.8 4 14.5 4 13V6l8-4Zm1.4 18.6 4.8-4.2c.7-.6 1.2-1.5 1.4-2.4-1 .3-2.1.3-3.2-.2-.7.9-1.6 1.6-2.7 2l-.3.1-.3-.1c-1.1-.4-2-1.1-2.7-2-1.1.5-2.2.5-3.2.2.2.9.7 1.8 1.4 2.4l4.8 4.2c.2.2.6.2.8 0Z"/></svg>
+      </span>
+      Kontanos
+    </a>
+
+    <div class="hidden items-center gap-8 lg:flex" id="desktop-links">
+      <a href="#servicios" class="nav-link">Servicios</a>
+      <a href="#nosotros" class="nav-link">Nosotros</a>
+      <a href="#proceso" class="nav-link">Proceso</a>
+      <a href="#contacto" class="nav-link">Contacto</a>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <a href="#contacto" class="js-open-chat hidden btn-primary sm:inline-flex !px-5 !py-2.5">Solicitar información</a>
+      <button id="menu-btn" type="button" class="flex h-11 w-11 items-center justify-center rounded-lg text-white lg:hidden" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <svg id="icon-open" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="icon-close" viewBox="0 0 24 24" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden lg:hidden" role="dialog" aria-modal="true" aria-label="Menú móvil">
+    <div class="container-page flex flex-col gap-1 rounded-2xl bg-white p-4 shadow-2xl ring-1 ring-black/5 mx-4 mb-4">
+      <a href="#servicios" class="rounded-lg px-4 py-3 font-semibold text-ink hover:bg-surface">Servicios</a>
+      <a href="#nosotros" class="rounded-lg px-4 py-3 font-semibold text-ink hover:bg-surface">Nosotros</a>
+      <a href="#proceso" class="rounded-lg px-4 py-3 font-semibold text-ink hover:bg-surface">Proceso</a>
+      <a href="#contacto" class="rounded-lg px-4 py-3 font-semibold text-ink hover:bg-surface">Contacto</a>
+      <a href="#contacto" class="js-open-chat btn-primary mt-2 w-full">Solicitar información</a>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+  <!-- ===================== HERO ===================== -->
+  <section id="inicio" class="relative overflow-hidden bg-ink pt-36 pb-28 lg:pt-44 lg:pb-36">
+    <video id="hero-video" muted loop playsinline preload="auto" poster="assets/img/hero-bg.webp" aria-hidden="true" class="absolute inset-0 h-full w-full object-cover opacity-30">
+      <source src="assets/video/hero-code.mp4" type="video/mp4">
+    </video>
+    <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary-dark/95 via-ink/90 to-ink"></div>
+    <div class="pointer-events-none absolute -top-32 -right-32 h-96 w-96 rounded-full bg-primary/30 blur-3xl"></div>
+    <div class="pointer-events-none absolute bottom-0 left-0 h-72 w-72 rounded-full bg-accent/20 blur-3xl"></div>
+
+    <div class="container-page relative grid items-center gap-16 lg:grid-cols-2">
+      <div class="reveal">
+        <span class="section-eyebrow !bg-white/10 !text-white">Servicios TIC integrales</span>
+        <h1 class="font-heading mt-6 text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
+          Tecnología que impulsa el <span class="text-accent">crecimiento</span> de tu negocio
+        </h1>
+        <p class="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
+          En Kontanos diseñamos y desarrollamos plataformas, sistemas y soluciones digitales a la medida: desde tu página web hasta tu sistema de punto de venta, todo bajo un mismo aliado tecnológico.
+        </p>
+        <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+          <a href="#servicios" class="btn-primary">
+            Ver servicios
+            <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#contacto" class="btn-secondary">Hablemos de tu proyecto</a>
+        </div>
+
+        <dl class="mt-14 grid max-w-md grid-cols-3 gap-6 border-t border-white/10 pt-8">
+          <div>
+            <dt class="text-xs uppercase tracking-wider text-white/50">Enfoque</dt>
+            <dd class="font-heading mt-1 text-lg font-bold text-white">A la medida</dd>
+          </div>
+          <div>
+            <dt class="text-xs uppercase tracking-wider text-white/50">Servicios</dt>
+            <dd class="font-heading mt-1 text-lg font-bold text-white">9 áreas</dd>
+          </div>
+          <div>
+            <dt class="text-xs uppercase tracking-wider text-white/50">Soporte</dt>
+            <dd class="font-heading mt-1 text-lg font-bold text-white">Continuo</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="reveal [transition-delay:150ms] relative hidden lg:block" aria-hidden="true">
+        <div class="relative mx-auto h-[420px] w-full max-w-md">
+          <div class="absolute inset-0 overflow-hidden rounded-3xl ring-1 ring-white/10">
+            <img src="assets/img/hero-showcase.webp" alt="Equipo de desarrollo trabajando en plataformas tecnológicas" loading="lazy" width="700" height="467" class="h-full w-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-br from-ink/80 via-ink/60 to-primary-dark/70"></div>
+          </div>
+
+          <div class="animate-float absolute left-6 top-8 flex w-56 items-center gap-3 rounded-2xl bg-white p-4 shadow-2xl">
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+            </span>
+            <div>
+              <p class="font-heading text-sm font-bold text-ink">Plataformas TIC</p>
+              <p class="text-xs text-ink-soft">Infraestructura escalable</p>
+            </div>
+          </div>
+
+          <div class="animate-float absolute right-4 top-40 w-52 rounded-2xl bg-white p-4 shadow-2xl [animation-delay:1.2s]">
+            <div class="flex items-center gap-3">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
+                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v4H3V3Zm2 6h14v12H5V9Zm4 4h6"/></svg>
+              </span>
+              <div>
+                <p class="font-heading text-sm font-bold text-ink">Punto de Venta</p>
+                <p class="text-xs text-ink-soft">Ventas en tiempo real</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="animate-float absolute bottom-8 left-10 w-52 rounded-2xl bg-white p-4 shadow-2xl [animation-delay:2.4s]">
+            <div class="flex items-center gap-3">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 19V6l12 6.5L6 19Z"/></svg>
+              </span>
+              <div>
+                <p class="font-heading text-sm font-bold text-ink">E-commerce</p>
+                <p class="text-xs text-ink-soft">Ventas online 24/7</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VALUE STRIP ===================== -->
+  <section class="border-b border-border bg-white py-10">
+    <div class="container-page grid grid-cols-2 gap-8 text-center sm:grid-cols-4">
+      <div class="reveal flex flex-col items-center gap-2">
+        <svg viewBox="0 0 24 24" class="h-7 w-7 text-primary" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 6v6c0 5 3.8 8.5 9 10 5.2-1.5 9-5 9-10V6l-9-4Z"/></svg>
+        <span class="text-sm font-semibold text-ink-soft">Seguridad primero</span>
+      </div>
+      <div class="reveal [transition-delay:100ms] flex flex-col items-center gap-2">
+        <svg viewBox="0 0 24 24" class="h-7 w-7 text-primary" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V10m6 9V4m6 15v-7"/></svg>
+        <span class="text-sm font-semibold text-ink-soft">Soluciones escalables</span>
+      </div>
+      <div class="reveal [transition-delay:200ms] flex flex-col items-center gap-2">
+        <svg viewBox="0 0 24 24" class="h-7 w-7 text-primary" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+        <span class="text-sm font-semibold text-ink-soft">Entrega ágil</span>
+      </div>
+      <div class="reveal [transition-delay:300ms] flex flex-col items-center gap-2">
+        <svg viewBox="0 0 24 24" class="h-7 w-7 text-primary" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20h5v-1a4 4 0 0 0-4-4h-1m-8 5H2v-1a4 4 0 0 1 4-4h1m5-5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm6 2a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></svg>
+        <span class="text-sm font-semibold text-ink-soft">Soporte dedicado</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICIOS ===================== -->
+  <section id="servicios" class="bg-surface py-24 lg:py-32">
+    <div class="container-page">
+      <div class="reveal mx-auto max-w-2xl text-center">
+        <span class="section-eyebrow">Lo que hacemos</span>
+        <h2 class="font-heading mt-5 text-3xl font-bold text-ink sm:text-4xl">Servicios diseñados para cada etapa de tu negocio</h2>
+        <p class="mt-4 text-lg text-ink-soft">Cubrimos todo el ciclo tecnológico de tu empresa: desde la infraestructura hasta la experiencia de tus clientes.</p>
+      </div>
+
+      <div class="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+        <article class="group service-card reveal">
+          <span class="service-icon">
+            <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6Zm0 9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3Zm3-7.5h.01M7 16.5h.01"/></svg>
+          </span>
+          <h3 class="font-heading text-lg font-bold text-ink">Plataformas de TICs</h3>
+          <p class="text-sm leading-relaxed text-ink-soft">Infraestructura tecnológica robusta y escalable para centralizar y conectar todas las áreas de tu empresa.</p>
+        </article>
+
+        <article class="group service-card reveal [transition-delay:60ms]">
+          <span class="service-icon">
+            <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M9 11h1m4 0h1M9 15h1m4 0h1"/></svg>
+          </span>
+          <h3 class="font-heading text-lg font-bold text-ink">Administración de Negocio</h3>
+          <p class="text-sm leading-relaxed text-ink-soft">Sistemas de gestión que ordenan procesos, inventarios, finanzas y equipos en un solo lugar.</p>
+        </article>
+
+        <article class="group service-card reveal [transition-delay:120ms]">
+          <span class="service-icon">
+            <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm-9-9h18M12 3c2.4 2.4 3.6 5.4 3.6 9s-1.2 6.6-3.6 9c-2.4-2.4-3.6-5.4-3.6-9S9.6 5.4 12 3Z"/></svg>
+          </span>
+          <h3 class="font-heading text-lg font-bold text-ink">Páginas Web</h3>
+          <p class="text-sm leading-relaxed text-ink-soft">Sitios web modernos, rápidos y responsivos que representan tu marca y convierten visitantes en clientes.</p>
+        </article>
+
+        <article class="group service-card reveal [transition-delay:180ms]">
+          <span class="service-icon">
+            <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 4.5a3 3 0 1 1 5 2.24V9h2.5A2.5 2.5 0 0 1 19.5 11.5V14h-2.24a3 3 0 1 0 0 5H19.5v.5a2.5 2.5 0 0 1-2.5 2.5h-2.5v-2.24a3 3 0 1 0-5 0V22H7a2.5 2.5 0 0 1-2.5-2.5V17H2.26a3 3 0 1 1 0-5H4.5V9.5A2.5 2.5 0 0 1 7 7h2.5V4.74Z"/></svg>
+          </span>
+          <h3 class="font-heading text-lg font-bold text-ink">Soluciones Tecnológicas</h3>
+          <p class="text-sm leading-relaxed text-ink-soft">Diagnóstico y soluciones a la medida para los retos específicos de tu industria y operación.</p>
+        </article>
+
+        <article class="group service-card reveal">
+          <span class="service-icon">
+            <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19 7-7 3 3-7 7-3-3Zm0 0-4 1 1-4 9.5-9.5a2.12 2.12 0 0 1 3 3L12 19Zm-7 3h6"/></svg>
+          </span>
+          <h3 class="font-heading text-lg font-bold text-ink">Diseño</h3>
+          <p class="text-sm leading-relaxed text-ink-soft">Diseño de marca e interfaces (UI/UX) que comunican profesionalismo y facilitan la experiencia del usuario.</p>
+        </article>
+
+        <article class="group service-card reveal [transition-delay:60ms]">
+          <span class="service-icon">
+            <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h2l2.6 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6L21 8H6M9 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm8 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"/></svg>
+          </span>
+          <h3 class="font-heading text-lg font-bold text-ink">E-commerce</h3>
+          <p class="text-sm leading-relaxed text-ink-soft">Tiendas en línea completas, con catálogo, pagos y logística integrados para vender todos los días.</p>
+        </article>
+
+        <article class="group service-card reveal [transition-delay:120ms]">
+          <span class="service-icon">
+            <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m8 9-4 3 4 3m8-6 4 3-4 3m-3-9-2 12"/></svg>
+          </span>
+          <h3 class="font-heading text-lg font-bold text-ink">Desarrollo de Sistemas</h3>
+          <p class="text-sm leading-relaxed text-ink-soft">Software a medida: desde módulos internos hasta plataformas completas, con arquitectura sólida y mantenible.</p>
+        </article>
+
+        <article class="group service-card reveal [transition-delay:180ms]">
+          <span class="service-icon">
+            <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18M3 9V6a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v3m-18 0v9a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V9M7 15h4"/></svg>
+          </span>
+          <h3 class="font-heading text-lg font-bold text-ink">Puntos de Venta</h3>
+          <p class="text-sm leading-relaxed text-ink-soft">Sistemas POS confiables para agilizar el cobro, controlar inventario y llevar el pulso de tus sucursales.</p>
+        </article>
+
+        <article class="group service-card reveal">
+          <span class="service-icon">
+            <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v11H4V4Zm5 15h6m-3-4v4M9 9l2.5 2.5L15 8"/></svg>
+          </span>
+          <h3 class="font-heading text-lg font-bold text-ink">Conferencistas</h3>
+          <p class="text-sm leading-relaxed text-ink-soft">Charlas, webinars y capacitaciones a cargo de especialistas en tecnología e Inteligencia Artificial para tu equipo o evento.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== NOSOTROS ===================== -->
+  <section id="nosotros" class="bg-white py-24 lg:py-32">
+    <div class="container-page grid items-center gap-16 lg:grid-cols-2">
+      <div class="reveal relative order-2 lg:order-1">
+        <div class="aspect-square w-full max-w-md overflow-hidden rounded-3xl shadow-2xl">
+          <img src="assets/img/nosotros-team.webp" alt="Equipo de Kontanos colaborando en un proyecto tecnológico" loading="lazy" width="800" height="800" class="h-full w-full object-cover">
+        </div>
+        <div class="absolute -bottom-6 -right-6 hidden rounded-2xl bg-accent px-6 py-4 shadow-xl sm:block">
+          <p class="font-heading text-2xl font-extrabold text-white">360°</p>
+          <p class="text-xs font-medium text-white/80">Cobertura tecnológica</p>
+        </div>
+      </div>
+
+      <div class="reveal order-1 lg:order-2">
+        <span class="section-eyebrow">Sobre Kontanos</span>
+        <h2 class="font-heading mt-5 text-3xl font-bold text-ink sm:text-4xl">Un solo aliado para toda tu tecnología</h2>
+        <p class="mt-6 text-lg leading-relaxed text-ink-soft">
+          En Kontanos combinamos estrategia, diseño e ingeniería para construir soluciones tecnológicas que realmente resuelven problemas de negocio, no solo funcionan en el papel.
+        </p>
+        <p class="mt-4 text-lg leading-relaxed text-ink-soft">
+          Trabajamos como una extensión de tu equipo: entendemos tu operación, proponemos la solución adecuada y la acompañamos después de la entrega.
+        </p>
+
+        <ul class="mt-8 space-y-4">
+          <li class="reveal flex items-start gap-3">
+            <svg viewBox="0 0 24 24" class="mt-0.5 h-6 w-6 shrink-0 text-primary" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>
+            <span class="text-ink-soft"><strong class="font-semibold text-ink">Un equipo, todas las disciplinas:</strong> negocio, diseño y desarrollo bajo un mismo proceso.</span>
+          </li>
+          <li class="reveal [transition-delay:80ms] flex items-start gap-3">
+            <svg viewBox="0 0 24 24" class="mt-0.5 h-6 w-6 shrink-0 text-primary" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>
+            <span class="text-ink-soft"><strong class="font-semibold text-ink">Soluciones a la medida:</strong> nada de plantillas genéricas que no calzan con tu operación.</span>
+          </li>
+          <li class="reveal [transition-delay:160ms] flex items-start gap-3">
+            <svg viewBox="0 0 24 24" class="mt-0.5 h-6 w-6 shrink-0 text-primary" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>
+            <span class="text-ink-soft"><strong class="font-semibold text-ink">Acompañamiento continuo:</strong> soporte y evolución del producto después del lanzamiento.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROCESO ===================== -->
+  <section id="proceso" class="bg-surface py-24 lg:py-32">
+    <div class="container-page">
+      <div class="reveal mx-auto max-w-2xl text-center">
+        <span class="section-eyebrow">Cómo trabajamos</span>
+        <h2 class="font-heading mt-5 text-3xl font-bold text-ink sm:text-4xl">Un proceso claro, de principio a fin</h2>
+      </div>
+
+      <div class="relative mt-16 grid gap-10 lg:grid-cols-4">
+        <div class="pointer-events-none absolute left-0 right-0 top-8 hidden h-0.5 bg-border lg:block" aria-hidden="true"></div>
+
+        <div class="reveal relative flex flex-col items-center text-center lg:items-start lg:text-left">
+          <span class="font-heading relative z-10 flex h-16 w-16 items-center justify-center rounded-full bg-primary text-xl font-bold text-white ring-8 ring-surface">01</span>
+          <h3 class="font-heading mt-6 text-lg font-bold text-ink">Descubrimiento</h3>
+          <p class="mt-2 text-sm text-ink-soft">Analizamos tu negocio, procesos y objetivos para entender el reto real.</p>
+        </div>
+        <div class="reveal [transition-delay:80ms] relative flex flex-col items-center text-center lg:items-start lg:text-left">
+          <span class="font-heading relative z-10 flex h-16 w-16 items-center justify-center rounded-full bg-primary text-xl font-bold text-white ring-8 ring-surface">02</span>
+          <h3 class="font-heading mt-6 text-lg font-bold text-ink">Propuesta</h3>
+          <p class="mt-2 text-sm text-ink-soft">Diseñamos la solución, el alcance y la arquitectura antes de escribir código.</p>
+        </div>
+        <div class="reveal [transition-delay:160ms] relative flex flex-col items-center text-center lg:items-start lg:text-left">
+          <span class="font-heading relative z-10 flex h-16 w-16 items-center justify-center rounded-full bg-primary text-xl font-bold text-white ring-8 ring-surface">03</span>
+          <h3 class="font-heading mt-6 text-lg font-bold text-ink">Desarrollo</h3>
+          <p class="mt-2 text-sm text-ink-soft">Construimos e iteramos con entregas visibles y comunicación constante.</p>
+        </div>
+        <div class="reveal [transition-delay:240ms] relative flex flex-col items-center text-center lg:items-start lg:text-left">
+          <span class="font-heading relative z-10 flex h-16 w-16 items-center justify-center rounded-full bg-primary text-xl font-bold text-white ring-8 ring-surface">04</span>
+          <h3 class="font-heading mt-6 text-lg font-bold text-ink">Soporte</h3>
+          <p class="mt-2 text-sm text-ink-soft">Acompañamos el lanzamiento y damos mantenimiento continuo a la solución.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA BANNER ===================== -->
+  <section class="relative overflow-hidden bg-ink py-20">
+    <img src="assets/img/cta-bg.webp" alt="" aria-hidden="true" loading="lazy" width="1920" height="1281" class="absolute inset-0 h-full w-full object-cover opacity-20">
+    <div class="pointer-events-none absolute inset-0 bg-gradient-to-r from-primary-dark/70 via-ink/85 to-ink/90"></div>
+    <div class="container-page relative flex flex-col items-center justify-between gap-8 text-center lg:flex-row lg:text-left">
+      <div class="reveal">
+        <h2 class="font-heading text-2xl font-bold text-white sm:text-3xl">¿Listo para modernizar la tecnología de tu negocio?</h2>
+        <p class="mt-3 max-w-xl text-white/70">Cuéntanos tu proyecto y te ayudamos a definir la solución correcta, sin compromiso.</p>
+      </div>
+      <a href="#contacto" class="js-open-chat btn-primary reveal shrink-0 !px-8 !py-4 text-base">Solicitar información</a>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACTO ===================== -->
+  <section id="contacto" class="bg-white py-24 lg:py-32">
+    <div class="container-page grid gap-16 lg:grid-cols-5">
+
+      <div class="reveal lg:col-span-2">
+        <span class="section-eyebrow">Contacto</span>
+        <h2 class="font-heading mt-5 text-3xl font-bold text-ink sm:text-4xl">Hablemos de tu proyecto</h2>
+        <p class="mt-4 text-lg leading-relaxed text-ink-soft">Completa el formulario y nuestro equipo se pondrá en contacto contigo a la brevedad.</p>
+
+        <div class="mt-10 space-y-6">
+          <div class="flex items-start gap-4">
+            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-muted text-primary">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9 6 9-6M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></svg>
+            </span>
+            <div>
+              <p class="text-sm font-semibold text-ink">Correo</p>
+              <p class="text-sm text-ink-soft">contacto@kontanos.com</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-muted text-primary">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5a2 2 0 0 1 2-2h2.2a1 1 0 0 1 1 .76l1 4a1 1 0 0 1-.55 1.13L6.9 9.6a12 12 0 0 0 6 6l.7-1.75a1 1 0 0 1 1.13-.55l4 1a1 1 0 0 1 .76 1V19a2 2 0 0 1-2 2h-1C9.4 21 3 14.6 3 6V5Z"/></svg>
+            </span>
+            <div>
+              <p class="text-sm font-semibold text-ink">Teléfono</p>
+              <p class="text-sm text-ink-soft">Agrega tu número de contacto</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-muted text-primary">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Zm0-8.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z"/></svg>
+            </span>
+            <div>
+              <p class="text-sm font-semibold text-ink">Ubicación</p>
+              <p class="text-sm text-ink-soft">Agrega la ciudad donde operas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form id="contact-form" class="reveal rounded-3xl border border-border bg-surface p-8 lg:col-span-3 lg:p-10" novalidate>
+        <div class="grid gap-6 sm:grid-cols-2">
+          <div class="sm:col-span-1">
+            <label for="nombre" class="mb-1.5 block text-sm font-semibold text-ink">Nombre <span class="text-accent">*</span></label>
+            <input type="text" id="nombre" name="nombre" required autocomplete="name" class="w-full rounded-lg border border-border bg-white px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20">
+            <p class="error-msg mt-1.5 hidden text-xs text-red-600" data-for="nombre">Ingresa tu nombre.</p>
+          </div>
+          <div class="sm:col-span-1">
+            <label for="empresa" class="mb-1.5 block text-sm font-semibold text-ink">Empresa</label>
+            <input type="text" id="empresa" name="empresa" autocomplete="organization" class="w-full rounded-lg border border-border bg-white px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20">
+          </div>
+          <div class="sm:col-span-1">
+            <label for="email" class="mb-1.5 block text-sm font-semibold text-ink">Correo <span class="text-accent">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" class="w-full rounded-lg border border-border bg-white px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20">
+            <p class="error-msg mt-1.5 hidden text-xs text-red-600" data-for="email">Ingresa un correo válido.</p>
+          </div>
+          <div class="sm:col-span-1">
+            <label for="telefono" class="mb-1.5 block text-sm font-semibold text-ink">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" autocomplete="tel" class="w-full rounded-lg border border-border bg-white px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20">
+          </div>
+          <div class="sm:col-span-2">
+            <label for="servicio" class="mb-1.5 block text-sm font-semibold text-ink">Servicio de interés</label>
+            <select id="servicio" name="servicio" class="w-full rounded-lg border border-border bg-white px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20">
+              <option value="">Selecciona una opción</option>
+              <option>Plataformas de TICs</option>
+              <option>Administración de Negocio</option>
+              <option>Páginas Web</option>
+              <option>Soluciones Tecnológicas</option>
+              <option>Diseño</option>
+              <option>E-commerce</option>
+              <option>Desarrollo de Sistemas</option>
+              <option>Puntos de Venta</option>
+              <option>Conferencistas (Tecnología e IA)</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="mensaje" class="mb-1.5 block text-sm font-semibold text-ink">Mensaje <span class="text-accent">*</span></label>
+            <textarea id="mensaje" name="mensaje" rows="4" required class="w-full resize-none rounded-lg border border-border bg-white px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-primary/20"></textarea>
+            <p class="error-msg mt-1.5 hidden text-xs text-red-600" data-for="mensaje">Cuéntanos brevemente tu proyecto.</p>
+          </div>
+        </div>
+
+        <button type="submit" id="submit-btn" class="btn-primary mt-8 w-full sm:w-auto">
+          <span id="submit-label">Enviar mensaje</span>
+          <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 20 18-8L3 4v6l12 2-12 2v6Z"/></svg>
+        </button>
+
+        <p id="form-status" class="mt-4 hidden rounded-lg px-4 py-3 text-sm" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="bg-ink py-16 text-white/70">
+  <div class="container-page">
+    <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="lg:col-span-2">
+        <a href="#inicio" class="flex items-center gap-2.5 font-heading text-xl font-bold text-white">
+          <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-white">
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg>
+          </span>
+          Kontanos
+        </a>
+        <p class="mt-4 max-w-sm text-sm leading-relaxed">
+          Plataformas TIC, sistemas de gestión, páginas web, e-commerce, puntos de venta y desarrollo de software a la medida para hacer crecer tu negocio.
+        </p>
+        <div class="mt-6 flex gap-3">
+          <a href="#" aria-label="Kontanos en LinkedIn" class="flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 transition-colors hover:bg-white/10 hover:text-white">
+            <svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.7c0-1.36-.02-3.1-1.9-3.1-1.9 0-2.2 1.48-2.2 3v5.8h-4V9Z"/></svg>
+          </a>
+          <a href="#" aria-label="Kontanos en Instagram" class="flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 transition-colors hover:bg-white/10 hover:text-white">
+            <svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+          </a>
+          <a href="#" aria-label="Kontanos en WhatsApp" class="flex h-10 w-10 items-center justify-center rounded-lg bg-white/5 transition-colors hover:bg-white/10 hover:text-white">
+            <svg viewBox="0 0 24 24" class="h-4.5 w-4.5" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.36A10 10 0 1 0 12 2Zm0 18.2a8.16 8.16 0 0 1-4.16-1.14l-.3-.18-3.08.8.82-3-.2-.31A8.2 8.2 0 1 1 12 20.2Zm4.5-6.14c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.78.95-.14.16-.28.18-.53.06-.24-.12-1.03-.38-1.96-1.21-.72-.64-1.21-1.43-1.35-1.67-.14-.24-.02-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42-.14 0-.3-.02-.46-.02-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-heading text-sm font-bold uppercase tracking-wider text-white">Navegación</h4>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="#inicio" class="transition-colors hover:text-white">Inicio</a></li>
+          <li><a href="#servicios" class="transition-colors hover:text-white">Servicios</a></li>
+          <li><a href="#nosotros" class="transition-colors hover:text-white">Nosotros</a></li>
+          <li><a href="#proceso" class="transition-colors hover:text-white">Proceso</a></li>
+          <li><a href="#contacto" class="transition-colors hover:text-white">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-heading text-sm font-bold uppercase tracking-wider text-white">Servicios</h4>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="#servicios" class="transition-colors hover:text-white">Plataformas de TICs</a></li>
+          <li><a href="#servicios" class="transition-colors hover:text-white">Páginas Web</a></li>
+          <li><a href="#servicios" class="transition-colors hover:text-white">E-commerce</a></li>
+          <li><a href="#servicios" class="transition-colors hover:text-white">Puntos de Venta</a></li>
+          <li><a href="#servicios" class="transition-colors hover:text-white">Conferencistas</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs sm:flex-row">
+      <p>&copy; <span id="year"></span> Kontanos. Todos los derechos reservados.</p>
+      <p>Diseñado con enfoque en resultados.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== CHAT DE SERVICIOS GUIADO ===================== -->
+<button id="chat-launcher" type="button" class="chat-launcher" aria-haspopup="dialog" aria-expanded="false" aria-controls="chat-panel" aria-label="Abrir chat de servicios">
+  <svg id="chat-launcher-icon-open" viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"/></svg>
+  <svg id="chat-launcher-icon-close" viewBox="0 0 24 24" class="hidden h-7 w-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+</button>
+
+<div id="chat-panel" class="chat-panel hidden" role="dialog" aria-modal="false" aria-labelledby="chat-title">
+  <div class="flex shrink-0 items-center justify-between gap-3 bg-gradient-to-br from-primary to-primary-dark px-5 py-4 text-white">
+    <div>
+      <p id="chat-title" class="font-heading text-sm font-bold">Asistente Kontanos</p>
+      <p class="text-xs text-white/70">Te ayudamos a encontrar tu solución</p>
+    </div>
+    <button id="chat-close" type="button" class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-white/80 transition-colors hover:bg-white/10 hover:text-white" aria-label="Cerrar chat">
+      <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+
+  <div id="chat-body" class="flex-1 space-y-3 overflow-y-auto bg-surface p-4"></div>
+
+  <div class="shrink-0 border-t border-border bg-white px-4 py-2.5 text-center">
+    <button id="chat-restart" type="button" class="text-xs font-semibold text-ink-soft transition-colors hover:text-primary">Reiniciar conversación</button>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

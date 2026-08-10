@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+
+  --color-primary: #7C3AED;
+  --color-primary-dark: #5B21B6;
+  --color-primary-light: #A78BFA;
+  --color-accent: #EA580C;
+  --color-accent-dark: #C2410C;
+  --color-ink: #1E293B;
+  --color-ink-soft: #475569;
+  --color-surface: #FAF9FE;
+  --color-muted: #F1EEFB;
+  --color-border: #E4DFF5;
+
+  --animate-fade-up: fade-up 0.7s ease-out both;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-14px); }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-body);
+    color: var(--color-ink);
+    background-color: #ffffff;
+  }
+  h1, h2, h3, h4, .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all duration-200 ease-out hover:bg-accent-dark hover:shadow-md active:scale-[0.97] cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-white/30 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-200 ease-out hover:bg-white/20 active:scale-[0.97] cursor-pointer;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border-2 border-primary px-6 py-3.5 text-sm font-semibold text-primary transition-all duration-200 ease-out hover:bg-primary hover:text-white active:scale-[0.97] cursor-pointer;
+  }
+
+  .section-eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full bg-muted px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-link {
+    @apply relative text-sm font-semibold text-white/85 transition-colors duration-200 hover:text-white cursor-pointer;
+  }
+
+  #header.bg-white .nav-link {
+    @apply text-ink-soft hover:text-primary;
+  }
+
+  .service-card {
+    @apply relative flex flex-col gap-4 rounded-2xl border border-border bg-white p-7 transition-all duration-300 ease-out hover:-translate-y-1.5 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10;
+  }
+
+  .service-icon {
+    @apply flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-muted text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-white;
+  }
+
+  .chat-launcher {
+    @apply fixed bottom-6 right-6 z-40 flex h-16 w-16 items-center justify-center rounded-full bg-accent text-white shadow-2xl transition-all duration-200 ease-out hover:bg-accent-dark hover:scale-105 active:scale-95 cursor-pointer;
+  }
+
+  .chat-panel {
+    @apply fixed bottom-6 right-6 z-50 flex h-[min(600px,75vh)] w-[min(380px,90vw)] flex-col overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-black/10;
+  }
+
+  .chat-bubble-bot {
+    @apply max-w-[85%] rounded-2xl rounded-bl-sm border border-border bg-white px-4 py-2.5 text-sm leading-relaxed text-ink shadow-sm;
+  }
+
+  .chat-bubble-user {
+    @apply ml-auto max-w-[85%] rounded-2xl rounded-br-sm bg-primary px-4 py-2.5 text-sm leading-relaxed text-white;
+  }
+
+  .chat-option {
+    @apply block w-full cursor-pointer rounded-xl border border-primary/30 bg-white px-3.5 py-2.5 text-left text-sm font-semibold text-primary transition-colors duration-150 hover:bg-primary hover:text-white;
+  }
+}
