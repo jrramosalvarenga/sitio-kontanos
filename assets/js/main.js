@@ -188,18 +188,13 @@
 
       var formData = new FormData(form);
 
-      fetch("contact.php", {
+      fetch("https://formspree.io/f/mljrbryz", {
         method: "POST",
         body: formData,
-        headers: { "X-Requested-With": "XMLHttpRequest" },
+        headers: { Accept: "application/json" },
       })
         .then(function (res) {
-          return res.json().catch(function () {
-            return { ok: res.ok };
-          });
-        })
-        .then(function (data) {
-          if (data && data.ok) {
+          if (res.ok) {
             setStatus("success", "Gracias, hemos recibido tu mensaje. Te contactaremos pronto.");
             form.reset();
           } else {
