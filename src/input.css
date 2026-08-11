@@ -108,19 +108,19 @@
   }
 
   .service-card-media {
-    @apply isolate overflow-hidden border-white/10 bg-cover bg-center hover:shadow-black/30;
+    @apply flex-col gap-0 overflow-hidden border-white/10 p-0 hover:shadow-black/30;
   }
 
-  .service-card-media .service-card-overlay {
-    @apply pointer-events-none absolute inset-0 -z-10 bg-gradient-to-t from-ink/90 via-ink/50 to-ink/25 transition-opacity duration-500;
+  .service-card-photo {
+    @apply h-44 w-full bg-cover bg-center transition-transform duration-500 ease-out group-hover:scale-105;
   }
 
-  .service-card-media:hover .service-card-overlay {
-    @apply opacity-80;
+  .service-card-caption {
+    @apply flex flex-1 flex-col gap-3 bg-ink p-6;
   }
 
   .service-card-media .service-icon {
-    @apply bg-white/15 text-white backdrop-blur-sm;
+    @apply bg-primary text-white;
   }
 
   .service-icon {

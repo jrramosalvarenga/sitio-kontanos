@@ -173,6 +173,19 @@ function serviceIcon(service, sizeClass) {
   return `<svg viewBox="0 0 24 24" class="${sizeClass}" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="${service.icon}"/></svg>`;
 }
 
+function serviceCardLink(s, headingTag, index) {
+  const delay = (index % 3) * 60;
+  const delayClass = delay ? ` [transition-delay:${delay}ms]` : "";
+  return `<a href="/servicios/${s.slug}/" class="group service-card service-card-media reveal-card${delayClass}">
+          <div class="service-card-photo bg-[url('/assets/img/servicios/${s.slug}-poster.webp')]"></div>
+          <div class="service-card-caption">
+            <span class="service-icon">${serviceIcon(s, "h-7 w-7")}</span>
+            <${headingTag} class="font-heading text-lg font-bold text-white">${escapeHtml(s.value)}</${headingTag}>
+            <p class="text-sm leading-relaxed text-white/80">${escapeHtml(s.shortDesc)}</p>
+          </div>
+        </a>`;
+}
+
 function servicePage(service) {
   const title = `${service.value} | Kontanos`;
   const description = `${service.shortDesc} Servicio de Kontanos en Catacamas, Olancho, Honduras.`;
@@ -271,15 +284,7 @@ ${header()}
     <div class="container-page">
       <h2 class="font-heading text-2xl font-bold text-ink sm:text-3xl">Otros servicios</h2>
       <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        ${otherServices
-          .map(
-            (s) => `<a href="/servicios/${s.slug}/" class="group service-card">
-          <span class="service-icon">${serviceIcon(s, "h-7 w-7")}</span>
-          <h3 class="font-heading text-lg font-bold text-ink">${escapeHtml(s.value)}</h3>
-          <p class="text-sm leading-relaxed text-ink-soft">${escapeHtml(s.shortDesc)}</p>
-        </a>`
-          )
-          .join("\n        ")}
+        ${otherServices.map((s, i) => serviceCardLink(s, "h3", i)).join("\n        ")}
       </div>
     </div>
   </section>
@@ -330,13 +335,7 @@ ${header()}
   <section class="bg-surface py-20 lg:py-24">
     <div class="container-page">
       <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        ${SERVICES.map(
-          (s) => `<a href="/servicios/${s.slug}/" class="group service-card">
-          <span class="service-icon">${serviceIcon(s, "h-7 w-7")}</span>
-          <h2 class="font-heading text-lg font-bold text-ink">${escapeHtml(s.value)}</h2>
-          <p class="text-sm leading-relaxed text-ink-soft">${escapeHtml(s.shortDesc)}</p>
-        </a>`
-        ).join("\n        ")}
+        ${SERVICES.map((s, i) => serviceCardLink(s, "h2", i)).join("\n        ")}
       </div>
     </div>
   </section>
