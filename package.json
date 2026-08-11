@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./assets/css/style.css --minify",
+    "build:pages": "node scripts/build-services.js",
+    "build": "npm run build:pages && tailwindcss -i ./src/input.css -o ./assets/css/style.css --minify",
     "watch": "tailwindcss -i ./src/input.css -o ./assets/css/style.css --watch"
   },
   "keywords": [],

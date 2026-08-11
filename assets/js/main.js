@@ -213,18 +213,9 @@
   }
 
   // Chat de servicios guiado
-  var SERVICES = [
-    { value: "Plataformas de TICs", desc: "Infraestructura tecnológica robusta y escalable para centralizar y conectar todas las áreas de tu empresa." },
-    { value: "Administración de Negocio", desc: "Sistemas de gestión que ordenan procesos, inventarios, finanzas y equipos en un solo lugar." },
-    { value: "Páginas Web", desc: "Sitios web modernos, rápidos y responsivos que representan tu marca y convierten visitantes en clientes." },
-    { value: "Soluciones Tecnológicas", desc: "Diagnóstico y soluciones a la medida para los retos específicos de tu industria y operación." },
-    { value: "Diseño", desc: "Diseño de marca e interfaces (UI/UX) que comunican profesionalismo y facilitan la experiencia del usuario." },
-    { value: "E-commerce", desc: "Tiendas en línea completas, con catálogo, pagos y logística integrados para vender todos los días." },
-    { value: "Desarrollo de Sistemas", desc: "Software a medida: desde módulos internos hasta plataformas completas, con arquitectura sólida y mantenible." },
-    { value: "Puntos de Venta", desc: "Sistemas POS confiables para agilizar el cobro, controlar inventario y llevar el pulso de tus sucursales." },
-    { value: "Conferencistas (Tecnología e IA)", desc: "Charlas, webinars y capacitaciones a cargo de especialistas en tecnología e Inteligencia Artificial para tu equipo o evento." },
-    { value: "Otro", desc: "Cuéntanos tu necesidad específica y diseñamos contigo la solución adecuada para tu negocio." },
-  ];
+  var SERVICES = (window.SERVICES || []).concat([
+    { slug: "otro", value: "Otro", shortDesc: "Cuéntanos tu necesidad específica y diseñamos contigo la solución adecuada para tu negocio.", features: [] },
+  ]);
 
   function findService(value) {
     for (var i = 0; i < SERVICES.length; i++) {
@@ -265,7 +256,7 @@
     if (id.indexOf("detail:") === 0) {
       var serviceName = id.slice("detail:".length);
       var svc = findService(serviceName);
-      var desc = svc ? svc.desc : "Cuéntanos tu necesidad específica y diseñamos contigo la solución adecuada.";
+      var desc = svc ? svc.shortDesc : "Cuéntanos tu necesidad específica y diseñamos contigo la solución adecuada.";
       return {
         bot: desc + " ¿Quieres solicitar información sobre este servicio?",
         options: [
@@ -364,21 +355,26 @@
     window.open(url, "_blank", "noopener");
   }
 
-  function goToForm(serviceName) {
-    closeChat();
+  function selectServiceOption(serviceName) {
     var select = document.getElementById("servicio");
-    if (select) {
-      for (var i = 0; i < select.options.length; i++) {
-        if (select.options[i].text === serviceName) {
-          select.selectedIndex = i;
-          break;
-        }
+    if (!select) return;
+    for (var i = 0; i < select.options.length; i++) {
+      if (select.options[i].text === serviceName) {
+        select.selectedIndex = i;
+        break;
       }
     }
+  }
+
+  function goToForm(serviceName) {
+    closeChat();
     var contacto = document.getElementById("contacto");
-    if (contacto) {
-      contacto.scrollIntoView({ behavior: "smooth" });
+    if (!contacto) {
+      window.location.href = "/?servicio=" + encodeURIComponent(serviceName) + "#contacto";
+      return;
     }
+    selectServiceOption(serviceName);
+    contacto.scrollIntoView({ behavior: "smooth" });
     var nombreInput = document.getElementById("nombre");
     if (nombreInput) {
       setTimeout(function () {
@@ -387,20 +383,22 @@
     }
   }
 
-  function resetChat() {
+  function resetChat(nodeId) {
     chatBody.innerHTML = "";
     currentOptionsWrap = null;
-    showNode("start");
+    showNode(nodeId || "start");
   }
 
-  function openChat() {
+  function openChat(nodeId) {
     chatIsOpen = true;
     chatPanel.classList.remove("hidden");
     chatLauncher.setAttribute("aria-expanded", "true");
     chatLauncher.setAttribute("aria-label", "Cerrar chat de servicios");
     launcherIconOpen.classList.add("hidden");
     launcherIconClose.classList.remove("hidden");
-    if (!chatBody.children.length) {
+    if (nodeId) {
+      resetChat(nodeId);
+    } else if (!chatBody.children.length) {
       resetChat();
     }
   }
@@ -422,7 +420,9 @@
     }
   });
   chatClose.addEventListener("click", closeChat);
-  chatRestart.addEventListener("click", resetChat);
+  chatRestart.addEventListener("click", function () {
+    resetChat();
+  });
 
   document.querySelectorAll(".js-open-chat").forEach(function (link) {
     link.addEventListener("click", function (e) {
@@ -430,4 +430,18 @@
       openChat();
     });
   });
+
+  document.querySelectorAll(".js-open-chat-service").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      var service = btn.getAttribute("data-service");
+      openChat(service ? "detail:" + service : "start");
+    });
+  });
+
+  // Si venimos de una subpágina de servicio con ?servicio=..., preselecciona el formulario.
+  var urlServiceParam = new URLSearchParams(window.location.search).get("servicio");
+  if (urlServiceParam) {
+    selectServiceOption(urlServiceParam);
+  }
 })();
