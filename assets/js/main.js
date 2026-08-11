@@ -92,7 +92,7 @@
   });
 
   // Scroll reveal
-  var revealEls = document.querySelectorAll(".reveal");
+  var revealEls = document.querySelectorAll(".reveal, .reveal-card");
   if ("IntersectionObserver" in window) {
     var observer = new IntersectionObserver(
       function (entries) {
