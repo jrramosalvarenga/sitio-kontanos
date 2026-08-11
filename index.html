@@ -69,87 +69,24 @@
 
 <main id="contenido">
   <!-- ===================== HERO ===================== -->
-  <section id="inicio" class="relative overflow-hidden bg-ink pt-36 pb-28 lg:pt-44 lg:pb-36">
-    <video id="hero-video" muted loop playsinline preload="auto" poster="assets/img/hero-bg.webp" aria-hidden="true" class="absolute inset-0 h-full w-full object-cover opacity-30">
-      <source src="assets/video/hero-code.mp4" type="video/mp4">
+  <section id="inicio" class="relative flex min-h-screen items-center overflow-hidden bg-ink">
+    <video id="hero-video" muted loop playsinline preload="auto" poster="assets/img/hero-network-poster.webp" aria-hidden="true" class="absolute inset-0 h-full w-full object-cover">
+      <source src="assets/video/hero-network.mp4" type="video/mp4">
     </video>
-    <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary-dark/95 via-ink/90 to-ink"></div>
-    <div class="pointer-events-none absolute -top-32 -right-32 h-96 w-96 rounded-full bg-primary/30 blur-3xl"></div>
-    <div class="pointer-events-none absolute bottom-0 left-0 h-72 w-72 rounded-full bg-accent/20 blur-3xl"></div>
+    <div class="pointer-events-none absolute inset-0 bg-black/35"></div>
+    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-ink/70 to-transparent"></div>
 
-    <div class="container-page relative grid items-center gap-16 lg:grid-cols-2">
-      <div class="reveal">
-        <span class="section-eyebrow !bg-white/10 !text-white">Servicios TIC integrales</span>
-        <h1 class="font-heading mt-6 text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
+    <div class="container-page relative py-32 text-center">
+      <div class="reveal mx-auto max-w-2xl">
+        <h1 class="font-heading text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
           Tecnología que impulsa el <span class="text-accent">crecimiento</span> de tu negocio
         </h1>
-        <p class="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
-          En Kontanos diseñamos y desarrollamos plataformas, sistemas y soluciones digitales a la medida: desde tu página web hasta tu sistema de punto de venta, todo bajo un mismo aliado tecnológico.
-        </p>
-        <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+        <div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
           <a href="#servicios" class="btn-primary">
             Ver servicios
             <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
           <a href="#contacto" class="btn-secondary">Hablemos de tu proyecto</a>
-        </div>
-
-        <dl class="mt-14 grid max-w-md grid-cols-3 gap-6 border-t border-white/10 pt-8">
-          <div>
-            <dt class="text-xs uppercase tracking-wider text-white/50">Enfoque</dt>
-            <dd class="font-heading mt-1 text-lg font-bold text-white">A la medida</dd>
-          </div>
-          <div>
-            <dt class="text-xs uppercase tracking-wider text-white/50">Servicios</dt>
-            <dd class="font-heading mt-1 text-lg font-bold text-white">9 áreas</dd>
-          </div>
-          <div>
-            <dt class="text-xs uppercase tracking-wider text-white/50">Soporte</dt>
-            <dd class="font-heading mt-1 text-lg font-bold text-white">Continuo</dd>
-          </div>
-        </dl>
-      </div>
-
-      <div class="reveal [transition-delay:150ms] relative hidden lg:block" aria-hidden="true">
-        <div class="relative mx-auto h-[420px] w-full max-w-md">
-          <div class="absolute inset-0 overflow-hidden rounded-3xl ring-1 ring-white/10">
-            <img src="assets/img/hero-showcase.webp" alt="Equipo de desarrollo trabajando en plataformas tecnológicas" loading="lazy" width="700" height="467" class="h-full w-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-br from-ink/80 via-ink/60 to-primary-dark/70"></div>
-          </div>
-
-          <div class="animate-float absolute left-6 top-8 flex w-56 items-center gap-3 rounded-2xl bg-white p-4 shadow-2xl">
-            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
-            </span>
-            <div>
-              <p class="font-heading text-sm font-bold text-ink">Plataformas TIC</p>
-              <p class="text-xs text-ink-soft">Infraestructura escalable</p>
-            </div>
-          </div>
-
-          <div class="animate-float absolute right-4 top-40 w-52 rounded-2xl bg-white p-4 shadow-2xl [animation-delay:1.2s]">
-            <div class="flex items-center gap-3">
-              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
-                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v4H3V3Zm2 6h14v12H5V9Zm4 4h6"/></svg>
-              </span>
-              <div>
-                <p class="font-heading text-sm font-bold text-ink">Punto de Venta</p>
-                <p class="text-xs text-ink-soft">Ventas en tiempo real</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="animate-float absolute bottom-8 left-10 w-52 rounded-2xl bg-white p-4 shadow-2xl [animation-delay:2.4s]">
-            <div class="flex items-center gap-3">
-              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 19V6l12 6.5L6 19Z"/></svg>
-              </span>
-              <div>
-                <p class="font-heading text-sm font-bold text-ink">E-commerce</p>
-                <p class="text-xs text-ink-soft">Ventas online 24/7</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
